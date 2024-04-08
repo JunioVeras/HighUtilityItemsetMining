@@ -71,7 +71,14 @@ Dentro da pasta DB existem exemplos de arquivos de entrada que podem ser utiliza
 - Exemplo
     
     ```
-    
+    2 4  #SUP: 0.4 #UTIL: 30
+    2 5  #SUP: 0.6 #UTIL: 31
+    1 3 5  #SUP: 0.4 #UTIL: 31
+    2 3 4  #SUP: 0.4 #UTIL: 34
+    2 3 5  #SUP: 0.6 #UTIL: 37
+    2 4 5  #SUP: 0.4 #UTIL: 36
+    2 3 4 5  #SUP: 0.4 #UTIL: 40
+    1 2 3 4 5 6  #SUP: 0.2 #UTIL: 30
     ```
     
 - O resultado indica os itemsets que tiveram a utilidade maior que o valor do parâmetro escolhido, o suporte do itemset, que é representado pela porcentagem da base que contém esse itemset, e a utilidade do itemset.
