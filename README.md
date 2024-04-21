@@ -107,7 +107,7 @@ As duas partes devem ser concatenadas no mesmo arquivo de entrada.
 
 - Caso o arquivo de entrada contenha também a nomeação dos itens, serão mostrados os nomes dos itens ao invés dos respectivos números
 
-## Exemplo adicional
+## Exemplo adicional 1
 
 - Utilizando o algoritmo Two-Phase serão minerados os itemsets de alta utilidade presentes no banco DB_Fruits_Utility.txt
 - Para isso será utilizada a seguinte configuração na interface:
@@ -127,7 +127,31 @@ As duas partes devem ser concatenadas no mesmo arquivo de entrada.
     Banana Cavendish  #SUP: 0.2375501456284003 #UTIL: 8695504
     ```
 
-- Com isso, podemos verificar as frutas que geram maior valor para esse mercado.
+- Com isso, podemos verificar os conjuntos de frutas que geram maior valor para esse mercado.
+
+## Exemplo adicional 2
+
+- Utilizando o algoritmo FHM serão minerados os itemsets de alta utilidade presentes no banco DB_ECommerce.txt
+- Para isso será utilizada a seguinte configuração na interface:
+
+![Configuração do exemplo](imagens/spmf3.png)
+
+- Ao rodar o algoritmo obtemos o seguinte resultado:
+
+    ```
+    CHILLI LIGHTS #UTIL: 3180086
+    JUMBO BAG STRAWBERRY JUMBO BAG PINK POLKADOT JUMBO BAG RED RETROSPOT #UTIL: 3310366
+    JUMBO BAG STRAWBERRY JUMBO BAG RED RETROSPOT #UTIL: 3961780
+    JUMBO BAG PINK POLKADOT JUMBO BAG RED RETROSPOT #UTIL: 3786534
+    26252829 #UTIL: 4570413
+    PARTY BUNTING #UTIL: 4825546
+    ASSORTED COLOUR BIRD ORNAMENT #UTIL: 3451370
+    CREAM HANGING HEART T-LIGHT HOLDER #UTIL: 5406791
+    REGENCY CAKESTAND 3 TIER #UTIL: 8560695
+    JUMBO BAG RED RETROSPOT #UTIL: 6253905
+    ```
+
+- Com isso, podemos verificar os conjuntos de produtos que geram maior valor para esse mercado.
 
 ## Referência
 
