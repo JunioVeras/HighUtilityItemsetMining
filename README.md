@@ -8,16 +8,34 @@ Primeiramente, certifique-se se ter pelo menos a versão 1.8 do Java instalado n
 
 ## Formato de entrada dos dados
 
-Os arquivos de entrada para algoritmos de mineração de itemsets com alta utilidade são do tipo txt e seguem o seguinte formato:
+Os arquivos de entrada para algoritmos de mineração de itemsets com alta utilidade são do tipo txt e tem duas partes no seguinte formato:
+
+### 1º parte (opcional): Nomeação dos itens presentes do banco
+
+- Linhas começando com @
+- Primeira linha com "@CONVERTED_FROM_TEXT"
+- Demais linhas fazem a ligação do item com sua descrição no formato @ITEM={ID}={DESCRICAO}
+    - ID é o número do item
+    - DESCRICAO é o nome do item
+- Exemplo (DB_Fruits_Utility.txt):
+
+    ```
+    @CONVERTED_FROM_TEXT
+    @ITEM=9188=Rampe Leaves Dried 50g
+    @ITEM=9189=Basil Seed 100g(casa casa)
+    @ITEM=9182=Bread Crumbs 500g
+    @ITEM=1220=artichokes baby
+    @ITEM=9183=Mangal Chicken Masala 100g
+    ...
+    ```
+
+### 2º parte: Dados das transações
 
 - Linhas representam as transações
 - Existem 3 colunas separadas pelo caractere ‘ : ’
     - Coluna 1 : itemset com os itens separados por espaço simples
     - Coluna 2 : utilidade total do itemset
     - Coluna 3 : utilidade respectiva de cada item do itemset separadas por espaço simples
-- É possível deixar comentários nas linhas utilizando um @
-
-Dentro da pasta DB existem exemplos de arquivos de entrada que podem ser utilizados.
 
 - Exemplo (DB_utility.txt):
     
@@ -29,6 +47,8 @@ Dentro da pasta DB existem exemplos de arquivos de entrada que podem ser utiliza
     3 5 2 7:11:2 3 4 2
     ```
     
+
+As duas partes devem ser concatenadas no mesmo arquivo de entrada.
 
 ## Utilizando a interface gráfica
 
@@ -50,6 +70,8 @@ Dentro da pasta DB existem exemplos de arquivos de entrada que podem ser utiliza
 ![Resultados do algoritmo](imagens/output.png)
 
 - O resultado indica os itemsets que tiveram a utilidade maior que o valor do parâmetro escolhido, o suporte do itemset, que é representado pela porcentagem da base que contém esse itemset, e a utilidade do itemset.
+
+- Caso o arquivo de entrada contenha também a nomeação dos itens, serão mostrados os nomes dos itens ao invés dos respectivos números
 
 ## Utilizando a interface de linha de comando
 
@@ -82,6 +104,30 @@ Dentro da pasta DB existem exemplos de arquivos de entrada que podem ser utiliza
     ```
     
 - O resultado indica os itemsets que tiveram a utilidade maior que o valor do parâmetro escolhido, o suporte do itemset, que é representado pela porcentagem da base que contém esse itemset, e a utilidade do itemset.
+
+- Caso o arquivo de entrada contenha também a nomeação dos itens, serão mostrados os nomes dos itens ao invés dos respectivos números
+
+## Exemplo adicional
+
+- Utilizando o algoritmo Two-Phase serão minerados os itemsets de alta utilidade presentes no banco DB_Fruits_Utility.txt
+- Para isso será utilizada a seguinte configuração na interface:
+
+![Configuração do exemplo](imagens/spmf2.png)
+
+- Ao rodar o algoritmo obtemos o seguinte resultado:
+
+    ```
+    Capsicum red  #SUP: 0.06272462493817663 #UTIL: 5735007
+    Cucumber Lebanese  #SUP: 0.05776226850579766 #UTIL: 5258961
+    Eggplant  #SUP: 0.04276529098203 #UTIL: 5480160
+    Garlic loose  #SUP: 0.04107819970324779 #UTIL: 7492000
+    Ginger  #SUP: 0.03442875199208661 #UTIL: 6279000
+    Mushroom Cup  #SUP: 0.035159641699181184 #UTIL: 5763489
+    Field Tomatoes  #SUP: 0.11154036379623015 #UTIL: 6107673
+    Banana Cavendish  #SUP: 0.2375501456284003 #UTIL: 8695504
+    ```
+
+- Com isso, podemos verificar as frutas que geram maior valor para esse mercado.
 
 ## Referência
 
