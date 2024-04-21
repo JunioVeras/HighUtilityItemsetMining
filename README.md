@@ -69,7 +69,7 @@ As duas partes devem ser concatenadas no mesmo arquivo de entrada.
 
 ![Resultados do algoritmo](imagens/output.png)
 
-- O resultado indica os itemsets que tiveram a utilidade maior que o valor do parâmetro escolhido, o suporte do itemset, que é representado pela porcentagem da base que contém esse itemset, e a utilidade do itemset.
+- O resultado indica os itemsets que tiveram a utilidade maior que o valor do parâmetro escolhido, o suporte do itemset (para alguns algoritmos isso não é mostrado), que é representado pela porcentagem da base que contém esse itemset, e a utilidade do itemset.
 
 - Caso o arquivo de entrada contenha também a nomeação dos itens, serão mostrados os nomes dos itens ao invés dos respectivos números
 
@@ -103,7 +103,7 @@ As duas partes devem ser concatenadas no mesmo arquivo de entrada.
     1 2 3 4 5 6  #SUP: 0.2 #UTIL: 30
     ```
     
-- O resultado indica os itemsets que tiveram a utilidade maior que o valor do parâmetro escolhido, o suporte do itemset, que é representado pela porcentagem da base que contém esse itemset, e a utilidade do itemset.
+- O resultado indica os itemsets que tiveram a utilidade maior que o valor do parâmetro escolhido, o suporte do itemset (para alguns algoritmos isso não é mostrado), que é representado pela porcentagem da base que contém esse itemset, e a utilidade do itemset.
 
 - Caso o arquivo de entrada contenha também a nomeação dos itens, serão mostrados os nomes dos itens ao invés dos respectivos números
 
