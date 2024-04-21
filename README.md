@@ -15,8 +15,8 @@ Os arquivos de entrada para algoritmos de mineração de itemsets com alta utili
 - Linhas começando com @
 - Primeira linha com "@CONVERTED_FROM_TEXT"
 - Demais linhas fazem a ligação do item com sua descrição no formato @ITEM={ID}={DESCRICAO}
-    - ID é o número do item
-    - DESCRICAO é o nome do item
+    - {ID} é o número do item
+    - {DESCRICAO} é o nome do item
 - Exemplo (DB_Fruits_Utility.txt):
 
     ```
