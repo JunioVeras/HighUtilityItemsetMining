@@ -50,7 +50,7 @@ Os arquivos de entrada para algoritmos de mineração de itemsets com alta utili
 
 As duas partes devem ser concatenadas no mesmo arquivo de entrada.
 
-## Utilizando a interface gráfica
+## Utilizando a interface gráfica (somente Windows)
 
 - Para usar o software SPMF, execute o arquivo spmf.jar presente neste repositório. Se isso não funcionar, utilize o botão direito sobre o arquivo e selecione a opção “abrir com..” e depois selecione a plataforma do Java. Se o Java estiver instalado e ainda não funcionar no Windows, você também pode tentar clicar duas vezes no arquivo START_SPMF.bat para executar o SPMF.
 - Se tudo estiver ocorrido bem, a seguinte janela será aberta:
